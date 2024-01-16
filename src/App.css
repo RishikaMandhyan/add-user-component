@@ -1,38 +1,88 @@
+* {
+  box-sizing: border-box;
+}
+
 .App {
+  font-family: sans-serif;
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.inputContainer {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 300px;
+  position: relative;
 }
 
-.App-link {
-  color: #61dafb;
+.inputContainer input {
+  width: 300px;
+  border: none;
+  padding: 4px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.inputContainer input:focus {
+  outline: none;
+  border: none;
+}
+
+.list {
+  width: 400px;
+  height: fit-content;
+  max-height: 300px;
+  overflow: auto;
+  margin-top: 5px;
+  box-shadow: 3px 3px 15px gray, 3px 3px 15px gray;
+  position: absolute;
+  top: 100%;
+  z-index:100;
+  background-color: white;
+  border-radius: 4px;
+}
+
+.listItem {
+  display: flex;
+  align-items: center;
+  gap:10px;
+  height: 50px;
+  text-align: left;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.listItem:hover{
+background-color: rgb(221, 220, 220);
+}
+
+.name {
+  flex: 1.5;
+}
+
+.email {
+  flex: 2;
+}
+
+.chips {
+  padding: 10px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  width: 85%;
+  border-bottom: 4px solid rgb(89, 89, 246);
+}
+
+.chipItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  width: fit-content;
+  border-radius: 30px;
+  background-color: rgb(216, 216, 216);
+}
+
+.chipItem.focus {
+  border: 2px solid rgb(89, 89, 246);
 }
